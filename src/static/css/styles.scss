@@ -1,0 +1,313 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+}
+
+// ################### NAVBAR #####################
+
+ul.topnav {
+  align-items: center;
+  background-color: $nav-background-color;
+  color: $nav-anchor-color;
+  display: flex;
+  font-size: $nav-font-size;
+  height: $nav-height;
+  justify-content: space-around;
+  opacity: $opacity;
+  padding-left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 90000000;
+  li {
+    list-style: none;
+    a {
+      color: $nav-anchor-color;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+ul.topnav {
+  li.dropdownIcon {
+    display: none;
+  }
+}
+
+// ################### HEADER #####################
+
+.header {
+  background-attachment: fixed;
+  background-image: url('../images/3.jpg');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  margin-bottom: $margin-bot;
+  padding-top: 40px;
+  position: relative;
+  width: 100%;
+  .header-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:50%;
+    background-color:white;
+    padding:24px;
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+}
+
+// ################### ABOUT #####################
+.about {
+  display: flex;
+  justify-content: space-around;
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+  .about-image {
+    flex: 1;
+    padding: $about-padding;
+    width: 100%;
+    img {
+      max-width: 100%;
+    }
+  }
+  .about-text {
+    flex: 1;
+    padding: $about-padding;
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+// ################### MENU #####################
+.menu {
+  h2 {
+    text-align: center;
+  }
+  img {
+    margin: 5px;
+    max-width: 100%;
+  }
+}
+
+.signature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .signature-items {
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.my_bowl {
+  margin-top: 10px;
+  h2 {
+    margin-top: 10px;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  img {
+    min-height: 200px;
+    max-width: 300px;
+  }
+}
+
+// ################### MODAL #####################
+.gal-modal {
+  img {
+    border-radius: 10px;
+    max-width: 300px;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+.modal-img {
+  max-width: 300px;
+}
+
+// ################### CONTACT #####################
+.contact {
+  // background: linear-gradient(to bottom right, #B2FF59, #CCFF90);
+  background-image: url('../images/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.contact-info {
+  div {
+    background-color: white;
+    margin: 0 auto;
+    margin-top: -120px;
+    position: relative;
+    width: 50%;
+    z-index: 999;
+    transition: .3s;
+
+    @media only screen and (max-width: 800px) {
+      margin-top: 10px;
+      width: 100%;
+    }
+    h2 {
+      padding-top: 20px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: .8em;
+      text-align: center;
+    }
+    .hours {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.contact-header {
+  // font-family: $body-font;
+}
+
+
+// ################### FOOTER #####################
+.footer {
+  align-items: center;
+  background-color: $footer-background-color;
+  color: $footer-font-color;
+  display: flex;
+  font-size: $footer-font-size;
+  height: $footer-height;
+  justify-content: space-around;
+  opacity: $opacity;
+  li {
+    list-style: none;
+    text-transform: uppercase;
+    a {
+      color: $footer-font-color;
+      text-decoration: none;
+    }
+  }
+}
+
+ul.footer {
+  bottom: 0;
+  padding-left: 0;
+  width: 100%;
+  li.footer-hours {
+    display: none;
+  }
+  li.footer-pin {
+    display: none;
+  }
+  li.footer-tel {
+    display: none;
+  }
+}
+
+ul.modal-hours {
+  li {
+    list-style: none;
+  }
+}
+
+// ################### MOBILE #####################
+
+@media only screen and (max-width: 800px) {
+// ################### NAVBAR #####################
+  ul.topnav {
+    align-items: center;
+    li:not(:nth-child(1)) {
+      display: none;
+    }
+    li.logo {
+      margin: 0 auto;
+    }
+    li.dropdownIcon {
+      display: block;
+      padding-right: $nav-padding;
+    }
+  }
+
+  ul.responsive {
+    background-color: $nav-background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: $opacity;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    li {
+       display: inline;
+       list-style: none;
+       float: none;
+       a {
+           color: $nav-anchor-color;
+           display: block;
+           font-size: $nav-font-size;
+           margin-bottom: $nav-margin;
+           padding-left: 10px;
+           padding-top: $nav-padding;
+           text-decoration: none;
+         }
+     }
+  }
+
+  ul.responsive li.dropdownIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: $nav-padding;
+  }
+
+// ################### FOOTER #####################
+
+  ul.footer {
+    li {
+      display: none;
+    }
+  }
+
+  ul.footer {
+    li.footer-hours {
+      display: block;
+    }
+    li.footer-pin {
+      display: block;
+    }
+    li.footer-tel {
+      display: block;
+    }
+  }
+
+}
