@@ -8,20 +8,46 @@ import Footer from './footer';
 import GalleryModal from './modal';
 import PokeBase from './poke_base';
 import Proteins from './proteins';
+import Toppings from './toppings';
+import Sauce from './sauce';
 
 // Images
 import Menu1 from '../static/images/menu-1.jpg';
 import Menu2 from '../static/images/menu-2.jpg';
 
-const images = [
-  'dragon_bowl.jpg',
-  'eel_bowl.jpg',
-  'garden_bowl.jpg',
-  'hawaiian_classic.jpg',
-  'johnnys_classic_bowl.jpg',
-  'salmon_lover_bowl.jpg',
-  'spicy_bowl.jpg',
-  'spicy_house_bowl.jpg'
+const signature = [
+  {
+    name: "Johnny's Classic (Raw)",
+    img: 'johnnys_classic_bowl.jpg'
+  },
+  {
+    name: 'Salmon Lover (Raw)',
+    img: 'salmon_lover_bowl.jpg'
+  },
+  {
+    name: 'Hawaiian Classic (Raw)',
+    img:'hawaiian_classic.jpg'
+  },
+  {
+    name: 'Spicy Bowl (Raw)',
+    img:'spicy_bowl.jpg'
+  },
+  {
+    name: 'Eel Bowl (Cooked)',
+    img:'eel_bowl.jpg'
+  },
+  {
+    name: 'Garden Bowl (Cooked)',
+    img:'garden_bowl.jpg'
+  },
+  {
+    name: 'Dragon Bowl (Cooked)',
+    img:'dragon_bowl.jpg'
+  },
+  {
+    name: 'Spicy House Bowl (Cooked)',
+    img:'spicy_house_bowl.jpg'
+  }
 ]
 
 const Menu = () => {
@@ -51,14 +77,19 @@ const Menu = () => {
         <hr />
         <h2>Signature Poke Bowls</h2>
         <div className="signature">
-          {images.map((item, index) => {
+          {signature.map((item, index) => {
             return (
-              <GalleryModal key={index} image={require(`../static/images/dish_image/${item}`)}/>
+              <div className="signature-items" key={index}>
+                <GalleryModal image={require(`../static/images/dish_image/${item.img}`)}/>
+                <p>{item.name}</p>
+              </div>
             )
           })}
         </div>
         <PokeBase />
         <Proteins />
+        <Toppings />
+        <Sauce />
       </div>
       <Contact />
       <Footer />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const poke_base = [
+const proteins = [
   {
     name: 'Ahi Tuna',
     img: 'ahituna.jpg'
@@ -71,10 +71,10 @@ class Proteins extends Component {
     return (
       <div className="my_bowl">
         <hr />
-        <h2>2. Pick your Protein</h2>
+        <h2>2. Pick Your Protein</h2>
         <p>(Please Choose One)</p>
         <div className="items">
-          {poke_base.map((item, index) => {
+          {proteins.map((item, index) => {
             return (
               <div key={item+index}>
                 <img src={require(`../static/images/accessory_image/protein/${item.img}`)} alt={item.img}/>

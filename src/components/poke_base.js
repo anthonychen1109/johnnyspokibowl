@@ -32,7 +32,7 @@ class PokeBase extends Component {
       <div className="my_bowl">
         <hr />
         <h2>Make Your Own</h2>
-        <h2>1. Pick your Base (Poki Bowl or Burrito)</h2>
+        <h2>1. Pick Your Base (Poki Bowl or Burrito)</h2>
         <p>(Please Choose One)</p>
         <div className="items">
           {poke_base.map((item, index) => {
