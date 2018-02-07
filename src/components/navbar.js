@@ -13,7 +13,7 @@ class Navbar extends Component {
   dropdownMenu() {
     let x = document.getElementById('dropdownClick');
     if (x.className === 'topnav') {
-      x.className = 'responsive animated slideInDown';
+      x.className = 'responsive';
     } else {
       x.className = 'topnav';
     }

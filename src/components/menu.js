@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 // Components
@@ -50,51 +50,68 @@ const signature = [
   }
 ]
 
-const Menu = () => {
-  return (
-    <div>
-      <Header />
-      <nav>
-        <ul className="topnav" id="dropdownClick">
-          <li className="logo"><Link to="/">Johnny's Poki Bowl</Link></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#">Order Online</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li id="test" className="dropdownIcon">
-            <a href="javascript:void(0);"
-              onClick={this.dropdownMenu}
-              >
-              &#9776;
-            </a>
-          </li>
-        </ul>
-      </nav>
+class Menu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
 
-      <div id="menu" className="menu container">
-        <h2>Our Menu</h2>
-        <img src={Menu1} alt="menu1"/>
-        <img src={Menu2} alt="menu2"/>
-        <hr />
-        <h2>Signature Poke Bowls</h2>
-        <div className="signature">
-          {signature.map((item, index) => {
-            return (
-              <div className="signature-items" key={index}>
-                <GalleryModal image={require(`../static/images/dish_image/${item.img}`)}/>
-                <p>{item.name}</p>
-              </div>
-            )
-          })}
+    }
+  }
+
+  dropdownMenu() {
+      let x = document.getElementById('dropdownClick');
+      if (x.className === 'topnav') {
+        x.className = 'responsive animated slideInDown';
+      } else {
+        x.className = 'topnav';
+      }
+    }
+
+  render () {
+    return (
+      <div>
+        <nav>
+          <ul className="topnav" id="dropdownClick">
+            <li className="logo"><Link to="/">Johnny's Poki Bowl</Link></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#">Order Online</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li id="test" className="dropdownIcon">
+              <a href="javascript:void(0);"
+                onClick={this.dropdownMenu}
+                >
+                &#9776;
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <Header />
+        <div id="menu" className="menu container">
+          <h2>Our Menu</h2>
+          <img src={Menu1} alt="menu1"/>
+          <img src={Menu2} alt="menu2"/>
+          <hr />
+          <h2>Signature Poke Bowls</h2>
+          <div className="signature">
+            {signature.map((item, index) => {
+              return (
+                <div className="signature-items" key={index}>
+                  <GalleryModal image={require(`../static/images/dish_image/${item.img}`)}/>
+                  <p>{item.name}</p>
+                </div>
+              )
+            })}
+          </div>
+          <PokeBase />
+          <Proteins />
+          <Toppings />
+          <Sauce />
         </div>
-        <PokeBase />
-        <Proteins />
-        <Toppings />
-        <Sauce />
+        <Contact />
+        <Footer />
       </div>
-      <Contact />
-      <Footer />
-    </div>
-  )
+    )
+  }
 }
 
 export default Menu;
