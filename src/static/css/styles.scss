@@ -165,16 +165,17 @@ ul.topnav {
   padding-top: 40px;
 }
 
+.contact-wrapper {
+  display: flex;
+  justify-content: space-around;
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .contact-info {
-  div {
     background-color: white;
-    margin: 0 auto;
-    margin-top: -120px;
-    position: relative;
-    width: 50%;
-    z-index: 999;
-    transition: .3s;
-
+    padding: 40px;
     @media only screen and (max-width: 800px) {
       margin-top: 10px;
       width: 100%;
@@ -191,11 +192,13 @@ ul.topnav {
     .hours {
       padding-bottom: 10px;
     }
-  }
 }
 
-.contact-header {
-  // font-family: $body-font;
+.contact-location {
+  flex-grow: 1;
+  @media only screen and (max-width: 800px) {
+    margin-top: 10px;
+  }
 }
 
 
