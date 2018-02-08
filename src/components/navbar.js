@@ -24,7 +24,6 @@ class Navbar extends Component {
       <nav>
         <ul className="topnav" id="dropdownClick">
           <li className="logo"><a href="">Johnny's Poki Bowl</a></li>
-          <li><a href="#about">About</a></li>
           <li><Link to="/menu">Menu</Link></li>
           <li><a href="#">Order Online</a></li>
           <li><a href="#contact">Contact</a></li>
