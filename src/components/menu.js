@@ -58,6 +58,15 @@ class Menu extends Component {
     }
   }
 
+//   componentDidMount () {
+//     const script = document.createElement("script");
+//
+//     script.src = "https://www.fbgcdn.com/widget/js/ewm2.js";
+//     script.async = true;
+//
+//     document.body.appendChild(script);
+// }
+
   dropdownMenu() {
       let x = document.getElementById('dropdownClick');
       if (x.className === 'topnav') {
@@ -72,7 +81,7 @@ class Menu extends Component {
       <div>
         <nav>
           <ul className="topnav" id="dropdownClick">
-            <li className="logo"><Link to="/">Johnny's Poki Bowl</Link></li>
+            <li className="logo"><a href="/">Johnny's Poki Bowl</a></li>
             <li><a href="#menu">Menu</a></li>
             <li><a data-glf-cuid="b6cb6133-f364-495b-ad68-298f3197fae3" data-glf-ruid="abdffdf9-c8cb-474b-9e45-24b0911fdbcf" href="#">Order Online</a></li>
             <li><a href="#contact">Contact</a></li>
