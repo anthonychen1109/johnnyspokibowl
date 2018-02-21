@@ -58,8 +58,8 @@ ul.topnav li.dropdownIcon {
     .header-wrapper .header-logo img {
       display: block;
       max-width: 100%; }
-  .header-wrapper .glf-button {
-    padding: 24px; }
+  .header-wrapper div {
+    text-align: center; }
 
 .about {
   display: flex;
@@ -79,11 +79,13 @@ ul.topnav li.dropdownIcon {
     .about .about-text h2 {
       text-align: center; }
 
-.menu h2 {
-  text-align: center; }
-.menu img {
-  margin: 5px;
-  max-width: 100%; }
+.menu {
+  padding-top: 40px; }
+  .menu h2 {
+    text-align: center; }
+  .menu img {
+    margin: 5px;
+    max-width: 100%; }
 
 .signature {
   display: flex;

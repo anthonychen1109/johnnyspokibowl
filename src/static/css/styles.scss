@@ -90,8 +90,8 @@ ul.topnav {
       max-width: 100%;
     }
   }
-  .glf-button {
-    padding: 24px;
+  div {
+    text-align: center;
   }
 }
 
@@ -121,6 +121,7 @@ ul.topnav {
 
 // ################### MENU #####################
 .menu {
+  padding-top: 40px;
   h2 {
     text-align: center;
   }
