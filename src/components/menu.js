@@ -96,10 +96,6 @@ class Menu extends Component {
         </nav>
         <Header />
         <div id="menu" className="menu container">
-          <h2>Our Menu</h2>
-          <img src={Menu1} alt="menu1"/>
-          <img src={Menu2} alt="menu2"/>
-          <hr />
           <h2>Signature Poke Bowls</h2>
           <div className="signature">
             {signature.map((item, index) => {
