@@ -24,7 +24,7 @@ class Navbar extends Component {
       <nav>
         <ul className="topnav" id="dropdownClick">
           <li className="logo"><a href="">Johnny's Poki Bowl</a></li>
-          <li><a href="/menu">Menu</a></li>
+          <li><a href="/gallery">Gallery</a></li>
           <li><a data-glf-cuid="b6cb6133-f364-495b-ad68-298f3197fae3" data-glf-ruid="abdffdf9-c8cb-474b-9e45-24b0911fdbcf" href="#">Order Online</a></li>
           <li><a href="#contact">Contact</a></li>
           <li id="test" className="dropdownIcon">
