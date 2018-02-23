@@ -107,10 +107,6 @@ class Menu extends Component {
               )
             })}
           </div>
-          <PokeBase />
-          <Proteins />
-          <Toppings />
-          <Sauce />
         </div>
         <Contact />
         <Footer />
