@@ -116,7 +116,10 @@ ul.topnav li.dropdownIcon {
     transform: scale(1.05); }
 
 .modal-img {
-  max-width: 300px; }
+  max-width: 100%; }
+  @media only screen and (max-width: 800px) {
+    .modal-img {
+      max-width: 300px; } }
 
 .contact {
   background-image: url("../images/1.jpg");
