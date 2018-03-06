@@ -30,7 +30,7 @@ const Contact = () =>
             <br />
             Saturday 10:30 AM to 9:30 PM
             <br />
-            Sunday 11:30 AM to 9:30 PM
+            Sunday Closed
           </p>
       </div>
 

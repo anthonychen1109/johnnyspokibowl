@@ -69,13 +69,13 @@ class Footer extends Component {
                     <li>Thursday: 10:30am-9:00pm</li>
                     <li>Friday: 10:30am-9:30pm</li>
                     <li>Saturday: 10:30am-9:30pm</li>
-                    <li>Sunday: 11:30am-9:30pm</li>
+                    <li>Sunday: Closed</li>
                   </ul>
               </Modal>
             </li>
           <li>mon-thurs: 10:30am-9:00pm</li>
           <li>fri-sat: 10:30am-9:30pm</li>
-          <li>sun: 11:30am-9:30pm</li>
+          <li>sun: Closed</li>
             <li className="footer-pin">
               <a href="#" onClick={this.openModal}>&#x1f4cc; map</a>
             </li>
